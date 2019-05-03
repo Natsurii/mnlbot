@@ -1,8 +1,4 @@
 facebook-sdk
-requests>=2.11.1
-requests_oauthlib>=0.7.0
-six>=1.10.0
-PySocks>=1.5.7
-git+https://github.com/tweepy/tweepy.git
+tweepy>=3.6.0
 time
 schedule
