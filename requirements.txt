@@ -1,4 +1,4 @@
 facebook-sdk
-tweepy
+git+https://github.com/tweepy/tweepy.git
 time
 schedule
