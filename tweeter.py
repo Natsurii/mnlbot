@@ -1,6 +1,7 @@
 import tweepy
 import random
 import os
+
 consumer_key = os.environ['CONKEY']
 consumer_secret = os.environ['CONSECRET']
 access_token =  os.environ['ACCTOKEN']
