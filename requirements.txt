@@ -1,3 +1,4 @@
 facebook-sdk
-tweepy>=3.7.0
+tweepy
 schedule
+beautifulsoup4
