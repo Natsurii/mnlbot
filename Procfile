@@ -1,1 +1,1 @@
-worker: python runner.py
+worker: python FB-Tweet.py
