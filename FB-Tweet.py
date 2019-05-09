@@ -21,7 +21,7 @@ consumer_key = os.environ['CONKEY']
 consumer_secret = os.environ['CONSECRET']
 twitter_token =  os.environ['ACCTOKEN']
 acc_secret = os.environ['TOKENSEC']
-#fb_token = os.environ['TOKEN'] 
+fb_token = os.environ['TOKEN_PAINTMIN'] 
 '''
 #for local use or DEBUG
 from keys import keys
@@ -95,12 +95,12 @@ def revthread():
 	fb = threading.Thread(name='Facebook API', target=fbthread)	
 	tw = threading.Thread(name='Twitter API', target=twitterthread)
 
-	#fb.start()
+	fb.start()
 	tw.start()
 
-	#fb.exit()
 	tw.exit()
-
+	fb.exit()
+	
 schedule.every().hour.at(':05').do(revthread) # run every xx:05:xx / 5 * * * * on cron 
     
 while 1:
