@@ -49,7 +49,7 @@ def facebookpost(oshi:str, adjective:str, file):
 	'''Posting the object to Facebook via GRAPH APi.'''
 	graph = facebook.GraphAPI(access_token=fb_token, version="3.1")
 	post = graph.put_photo(image=open(file,"rb"),
-                message=f'Our oshi MNL48 {oshi} is{adjective}.')
+                message=f'Our oshi MNL48 {oshi} is {adjective}.')
 
 	graph.put_object(parent_object=post['post_id'], connection_name='comments',
                   message='Is this true?')
@@ -61,7 +61,7 @@ def twitterpost(oshi:str, adjective:str, file):
 	api = tweepy.API(auth) 
 
 	image_path = file
-	tweet = f'Our oshi MNL48 {oshi} is{adjective}.'
+	tweet = f'Our oshi MNL48 {oshi} is {adjective}.'
 	status = api.update_with_media(image_path, tweet)
 
 	return
