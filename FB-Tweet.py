@@ -101,9 +101,9 @@ def revthread():
 	tw.exit()
 	fb.exit()
 	
+schedule.every().hour.at(':35').do(revthread) # run every xx:35:xx / 35 * * * * on cron 
 schedule.every().hour.at(':05').do(revthread) # run every xx:05:xx / 5 * * * * on cron 
     
 while 1:
     schedule.run_pending()
     time.sleep(1)
-
