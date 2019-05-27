@@ -94,7 +94,7 @@ def twitterpost(oshi:str, adjective:str):
 	api = tweepy.API(auth) 
 
 	image_path = 'outfile.png'
-	tweet = f'Our oshi MNL48 {oshi} is {adjective}.'
+	tweet = f'Our oshi MNL48 {oshi} is {adjective}. #MNL48 #MNL48{oshi}'
 	status = api.update_with_media(image_path, tweet)
 
 	return
